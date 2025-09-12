@@ -12,3 +12,10 @@ yarn-error.log*
 .vscode/
 .DS_Store
 Thumbs.db
+package-lock.json
+yarn.lock
+.idea/
+*.iml   
+.vite/
+coverage/
+*.log
