@@ -1,10 +1,38 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { typewriterStrings } from "../../data/projects"
+import { typewriterStrings } from "../../data/projects";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-yellow-400 to-green-500 text-white">
+    <section
+      className="p-3 pt-5  flex flex-col justify-center items-center text-center  text-white"
+      id="home"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center">
+        {/* Left Section */}
+        <div className="flex flex-col justify-center p-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            Welcome to Our Platform
+          </h1>
+          <p className="text-gray-600 mb-6">
+            A short description or tagline goes here. Keep it engaging and
+            concise.
+          </p>
+          <button className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+            Get Started
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex justify-center">
+          <img
+            src="./images/main.png"
+            alt="Hero"
+            className="w-full max-w-md md:max-w-full"
+          />
+        </div>
+      </div>
+
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
