@@ -1,31 +1,22 @@
-export const projects = [
-  {
-    title: "E-commerce Website",
-    description: "Built with React, Redux, and MongoDB backend.",
-    image: "/images/ecommerce.png",
-    link: "https://yourliveproject.com",
-    github: "https://github.com/rahuldewal/ecommerce",
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal branding site with React + Framer Motion.",
-    image: "/images/portfolio.png",
-    link: "https://rahuldewal.dev",
-    github: "https://github.com/rahuldewal/portfolio",
-  },
+export const DESIGNATION = [
+  "Frontend Developer",
+  "React Developer",
+  "UI/UX Designer",
 ];
-export const skills = [
+export const SKILLS = [
   "JavaScript",
-  "React",
-  "Node.js",
-  "Express",
-  "MongoDB",
+  "React JS",
   "HTML",
   "CSS",
+  "MUI",
+  "TailwindCSS",
+  "Bootstrap",
   "Git",
-  "Docker",
+  // "Node.js",
+  // "Express",
+  // "MongoDB",
 ];
-export const experiences = [
+export const EXPERIENCE = [
   {
     title: "Frontend Developer",
     company: "Tech Solutions Inc.",
@@ -41,21 +32,58 @@ export const experiences = [
       "Assisted in building responsive websites and improving UI/UX.",
   },
 ];
-export const education = [
+export const EDUCATION = [
   {
-    degree: "B.Sc. in Computer Science",
-    institution: "State University",
-    duration: "2018 - 2022",
+    degree: "BCA in Computer Science",
+    institution: "MJPRU ",
+    duration: "2015 - 2018",
   },
   {
-    degree: "High School Diploma",
-    institution: "City High School",
-    duration: "2016 - 2018",
+    degree: "Intermediate in Science",
+    institution: "CAS Inter College ",
+    duration: "2014 - 2015",
+  },
+  {
+    degree: "High School",
+    institution: "CAS Inter College ",
+    duration: "2013 - 2014",
   },
 ];
-
-export const typewriterStrings = [
-  "Full-Stack Developer",
-  "Open Source Contributor",
-  "Tech Enthusiast",
+export const PROJECTS = [
+  {
+    title: "E-Commerce Website",
+    description:
+      "A full-stack e-commerce platform with product pages, cart, and secure checkout.",
+    tech: ["React", "TypeScript", "MongoDB", "Node.js"],
+    img: "./images/shopEasy.png",
+    demo: "https://timely-mooncake-5c977c.netlify.app/",
+    github: "https://github.com/RahulsHubb/apnaShop",
+  },
+  {
+    title: "LMS Platform",
+    description:
+      "A learning management system for teachers and students with video, quizzes, and reports.",
+    tech: ["React", "Redux", "TailwindCSS", "Node.js"],
+    img: "./images/lms.png",
+    demo: "https://pmponline.co.in/dashboard",
+    github: "",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive personal portfolio built with React + Tailwind.",
+    tech: ["React", "TailwindCSS", "TypeScript"],
+    img: "/images/portfolio.png",
+    demo: "https://rahuldewalportfolio.netlify.app/",
+    github: "https://github.com/RahulsHubb/portfolio",
+  },
+  {
+    title: "Dgital Training Platform",
+    description:
+      "A platform for online training with video, quizzes, and reports.",
+    tech: ["React", "Recharts", "TypeScript", "MUI", "GIT"],
+    img: "/images/viliyo.png",
+    demo: "https://viliyo.com/",
+    github: "",
+  },
 ];

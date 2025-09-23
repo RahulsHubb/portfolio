@@ -1,55 +1,63 @@
-import { projects } from "../../data/projects";
+import { Link } from "react-router-dom";
+import { PROJECTS } from "../../data/projects";
 
-export default function Projects() {
+const Projects = () => {
   return (
-    <section id="projects" className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          🚀 Projects
+    <section id="projects" className="py-20 bg-white dark:bg-gray-100">
+      <div className="container mx-auto px-6 md:px-12">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12">
+          My Projects
         </h2>
 
-        {/* Project Grid */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((proj, idx) => (
+        <div className="grid md:grid-cols-2 gap-10">
+          {PROJECTS.map((project, index) => (
             <div
-              key={idx}
-              className="bg-white shadow-xl rounded-2xl overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+              key={index}
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition"
             >
-              {/* Project Image */}
               <img
-                src={proj.image}
-                alt={proj.title}
+                src={project.img}
+                alt={project.title}
                 className="w-full h-48 object-cover"
               />
-
-              {/* Project Content */}
-              <div className="p-6 flex flex-col h-full">
-                <h3 className="text-2xl font-semibold text-gray-800">
-                  {proj.title}
+              <div className="p-6 space-y-4">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                  {project.title}
                 </h3>
-                <p className="text-gray-600 mt-2 flex-grow">
-                  {proj.description}
+                <p className="text-gray-600 dark:text-gray-300">
+                  {project.description}
                 </p>
 
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-3 py-1 bg-indigo-100 text-indigo-600 text-sm rounded-full"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
                 {/* Links */}
-                <div className="flex gap-4 mt-4">
-                  <a
-                    href={proj.link}
+                <div className="flex gap-4 pt-4">
+                  <Link
+                    to={project.demo}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg shadow hover:opacity-90 transition"
+                    className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
                   >
-                    Live
-                  </a>
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-50 transition"
-                  >
-                    Code
-                  </a>
+                    Live Demo
+                  </Link>
+                  {project.github && (
+                    <Link
+                      to={project.github}
+                      target="_blank"
+                      className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+                    >
+                      GitHub
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -58,4 +66,5 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+export default Projects;
