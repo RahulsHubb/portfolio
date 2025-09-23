@@ -18,7 +18,7 @@ The website is fully responsive, modern, and optimized for performance.
 - **Version Control:** Git & GitHub  
 
 ## 🔗 Live Demo
-👉 [View Portfolio](https://your-domain.com)  
+👉 [View Portfolio](https://rahuldewalportfolio.netlify.app/)  
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
