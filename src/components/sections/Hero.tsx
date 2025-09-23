@@ -1,16 +1,32 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { typewriterStrings } from "../../data/projects";
+import { DESIGNATION } from "../../data/projects";
 
 export default function Hero() {
   return (
     <section
-      className="p-3 pt-5  flex flex-col justify-center items-center text-center  text-white"
+      className="p-3 pt-5 ßflex flex-col justify-center items-center text-center text-white border-gray-300 shadow-2xl"
       id="home"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center">
         {/* Left Section */}
         <div className="flex flex-col justify-center p-6">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-5xl font-bold text-black"
+          >
+            Hi, I'm PM Publishers pvt ltd 👋
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-xl mt-4 text-gray-600"
+          >
+            <Typewriter words={DESIGNATION} loop={true} cursor />
+          </motion.p>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Welcome to Our Platform
           </h1>
@@ -32,23 +48,6 @@ export default function Hero() {
           />
         </div>
       </div>
-
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-5xl font-bold"
-      >
-        Hi, I'm PM Publishers pvt ltd 👋
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="text-xl mt-4"
-      >
-        <Typewriter words={typewriterStrings} loop={true} cursor />
-      </motion.p>
     </section>
   );
 }
