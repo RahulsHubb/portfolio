@@ -1,74 +1,124 @@
-// import { Github, Linkedin, Twitter, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  Mail,
+  ArrowUp,
+  LineSquiggle,
+} from "lucide-react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-8 mt-20">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-        {/* Left: Branding */}
-        <p className="text-gray-600 dark:text-gray-400 text-sm">
-          © {new Date().getFullYear()} Rahul Dewal. All rights reserved.
-        </p>
+    <footer className="border-t border-border-primary bg-bg-primary">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:justify-between">
+          {/* Brand */}
+          <div>
+            <a
+              href="https://linkedin.com/in/rahuldewal33"
+              className="text-lg font-bold tracking-tight text-text-primary"
+            >
+              Rahul<span className="text-brand-primary">.</span>
+            </a>
 
-        {/* Middle: Quick Links */}
-        <ul className="flex space-x-6 text-gray-600 dark:text-gray-300 text-sm">
-          <li>
-            <Link to="#home" className="hover:text-indigo-600">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="#about" className="hover:text-indigo-600">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="#projects" className="hover:text-indigo-600">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="#contact" className="hover:text-indigo-600">
-              Contact
-            </Link>
-          </li>
-        </ul>
+            <p className="mt-2 text-sm text-text-muted">
+              Frontend Engineer building scalable web experiences.
+            </p>
+          </div>
 
-        {/* Right: Social Icons */}
-        <div className="flex space-x-6">
-          <Link
-            to="mailto:your@email.com"
-            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
-          >
-            {/* <Mail size={20} /> */}
-          </Link>
-          <Link
-            to="https://github.com/yourusername"
-            target="_blank"
-            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
-          >
-            {/* <Github size={20} /> */}
-          </Link>
-          <Link
-            to="https://linkedin.com/in/yourusername"
-            target="_blank"
-            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
-          >
-            {/* <Linkedin size={20} /> */}
-          </Link>
-          <Link
-            to="https://twitter.com/yourusername"
-            target="_blank"
-            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
-          >
-            {/* <Twitter size={20} /> */}
-          </Link>
+          {/* Social Links */}
+          <div className="flex items-center gap-3">
+            {/* <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="
+                rounded-lg
+                border border-border-primary
+                bg-bg-card
+                p-2.5
+                text-text-muted
+                transition-all duration-300
+                hover:border-brand-primary
+                hover:text-brand-primary
+              "
+            >
+              <Github size={18} />
+            </a> */}
+
+            <a
+              href="https://linkedin.com/in/rahuldewal33"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="
+                rounded-lg
+                border border-border-primary
+                bg-bg-card
+                p-2.5
+                text-text-muted
+                transition-all duration-300
+                hover:border-brand-primary
+                hover:text-brand-primary
+              "
+            >
+              <LineSquiggle size={18} />
+            </a>
+
+            <a
+              href="mailto:dewalsuccess@gmail.com"
+              aria-label="Email"
+              className="
+                rounded-lg
+                border border-border-primary
+                bg-bg-card
+                p-2.5
+                text-text-muted
+                transition-all duration-300
+                hover:border-brand-primary
+                hover:text-brand-primary
+              "
+            >
+              <Mail size={18} />
+            </a>
+
+            <a
+              href="#"
+              aria-label="Back to top"
+              className="
+                ml-2
+                rounded-lg
+                border border-border-primary
+                bg-bg-card
+                p-2.5
+                text-text-muted
+                transition-all duration-300
+                hover:border-brand-primary
+                hover:text-brand-primary
+              "
+            >
+              <ArrowUp size={18} />
+            </a>
+          </div>
         </div>
-      </div>
 
-      {/* Bottom: Tagline */}
-      <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400">
-        Built with ❤️ using React + TailwindCSS
+        {/* Bottom */}
+        <div className="mt-10 flex flex-col gap-3 border-t border-border-primary pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-text-subtle">
+            © {currentYear} Rahul Dewal. All rights reserved.
+          </p>
+
+          <p className="text-text-subtle">
+            Built with{" "}
+            <span className="text-text-secondary">
+              React
+            </span>{" "}
+            +{" "}
+            <span className="text-text-secondary">
+              TypeScript
+            </span>
+          </p>
+        </div>
       </div>
     </footer>
   );

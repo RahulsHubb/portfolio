@@ -5,6 +5,9 @@ import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/common/Footer";
+import QuickProof from "../components/common/QuickProof";
+import WhatIBuild from "../components/common/WhatIBuild";
+import CTA from "../components/common/CTA";
 
 const Home = () => {
   return (
@@ -14,7 +17,8 @@ const Home = () => {
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
+      <CTA/>
       <Footer />
     </div>
   );
