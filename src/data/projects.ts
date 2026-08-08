@@ -3,9 +3,12 @@ export const DESIGNATION = [
   "React Developer",
   "UI/UX Designer",
 ];
+
 export const SKILLS = [
   "JavaScript",
   "React JS",
+  "TypeScript",
+  "Redux",
   "HTML",
   "CSS",
   "MUI",
@@ -16,6 +19,15 @@ export const SKILLS = [
   // "Express",
   // "MongoDB",
 ];
+
+export const CODE_LINES = [
+  "const developer = {",
+  "  experience: '5+ years',",
+  "  focus: 'Frontend Engineering',",
+  "  stack: ['React', 'TypeScript'],",
+  "};",
+];
+
 export const EXPERIENCE = [
   {
     title: "Frontend Developer",
@@ -87,3 +99,4 @@ export const PROJECTS = [
     github: "",
   },
 ];
+
