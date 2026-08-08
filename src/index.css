@@ -1,6 +1,86 @@
-/* Tailwind Directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* No custom CSS needed! */
+@theme {
+  /* ================================
+     Portfolio Brand Colors
+     ================================ */
+
+  --color-brand-primary: #22d3ee;
+  --color-brand-secondary: #3b82f6;
+  --color-brand-success: #84cc16;
+
+  /* ================================
+     Backgrounds
+     ================================ */
+
+  --color-bg-primary: #070b14;
+  --color-bg-secondary: #0d1422;
+  --color-bg-card: #111a2a;
+  --color-bg-elevated: #162033;
+
+  /* ================================
+     Text
+     ================================ */
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+  --color-text-subtle: #64748b;
+
+  /* ================================
+     Borders
+     ================================ */
+
+  --color-border-primary: #1e293b;
+  --color-border-secondary: #334155;
+
+  /* ================================
+     Gradient
+     ================================ */
+
+  --background-image-brand-gradient: linear-gradient(
+    135deg,
+    #22d3ee 0%,
+    #3b82f6 100%
+  );
+
+  /* ================================
+     Effects
+     ================================ */
+
+  --color-glow-primary: rgb(34 211 238 / 0.12);
+  --color-glow-secondary: rgb(59 130 246 / 0.12);
+}
+
+/* ================================
+   Reusable Portfolio Utilities
+   ================================ */
+
+@utility portfolio-card {
+  @apply rounded-2xl border border-border-primary bg-bg-card;
+}
+
+@utility portfolio-card-hover {
+  @apply transition-all duration-300 hover:border-brand-primary;
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl
+    bg-brand-gradient
+    px-6 py-3.5
+    font-medium text-slate-950
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:shadow-[0_0_30px_var(--color-glow-primary)];
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl
+    border border-border-secondary
+    bg-transparent
+    px-6 py-3.5
+    font-medium text-text-primary
+    transition-all duration-300
+    hover:border-brand-primary
+    hover:bg-bg-card;
+}

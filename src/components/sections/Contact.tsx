@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Twitter, GithubIcon } from "lucide-react";
+// import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -27,28 +27,28 @@ const Contact = () => {
                 to="mailto:your@email.com"
                 className="text-indigo-600 hover:text-indigo-800"
               >
-                <Mail size={28} />
+                {/* <Mail size={28} /> */}
               </Link>
               <Link
                 to="https://github.com/yourusername"
                 target="_blank"
                 className="text-gray-700 dark:text-gray-200 hover:text-indigo-600"
               >
-                <GithubIcon size={28} />
+                {/* <Github size={28} /> */}
               </Link>
               <Link
                 to="https://linkedin.com/in/yourusername"
                 target="_blank"
                 className="text-blue-600 hover:text-blue-800"
               >
-                <Linkedin size={28} />
+                {/* <Linkedin size={28} /> */}
               </Link>
               <Link
                 to="https://twitter.com/yourusername"
                 target="_blank"
                 className="text-sky-500 hover:text-sky-700"
               >
-                <Twitter size={28} />
+                {/* <Twitter size={28} /> */}
               </Link>
             </div>
           </div>

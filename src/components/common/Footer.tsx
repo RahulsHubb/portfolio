@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+// import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -40,28 +40,28 @@ const Footer = () => {
             to="mailto:your@email.com"
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
           >
-            <Mail size={20} />
+            {/* <Mail size={20} /> */}
           </Link>
           <Link
             to="https://github.com/yourusername"
             target="_blank"
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
           >
-            <Github size={20} />
+            {/* <Github size={20} /> */}
           </Link>
           <Link
             to="https://linkedin.com/in/yourusername"
             target="_blank"
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
           >
-            <Linkedin size={20} />
+            {/* <Linkedin size={20} /> */}
           </Link>
           <Link
             to="https://twitter.com/yourusername"
             target="_blank"
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600"
           >
-            <Twitter size={20} />
+            {/* <Twitter size={20} /> */}
           </Link>
         </div>
       </div>
