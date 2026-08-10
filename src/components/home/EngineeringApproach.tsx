@@ -3,7 +3,7 @@ import { ENGINEER_APPROACHES } from "../../data/projects";
 
 const EngineeringApproach = () => {
     return (
-        <section className="relative bg-bg-primary py-24 sm:py-32">
+        <section className="relative bg-bg-primary py-24 sm:py-32" id="approach">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Header */}

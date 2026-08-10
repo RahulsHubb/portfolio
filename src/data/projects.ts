@@ -48,8 +48,13 @@ export const CORE_TECHNOLOGIES = [
   "Git",
 ];
 
-export const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
-
+export const NAV_LINKS = [
+  { label: "Work", href: "#work" },
+  { label: "Approach", href: "#approach" },
+  { label: "Experience", href: "#experience" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+];
 
 export const CODE_LINES = [
   "const developer = {",

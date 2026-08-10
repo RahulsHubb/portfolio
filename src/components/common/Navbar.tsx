@@ -1,76 +1,239 @@
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X, ArrowUpRight, Download } from "lucide-react";
 import { NAV_LINKS } from "../../data/projects";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="w-full bg-gray-100 dark:bg-gray-900 z-50">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        {/* Logo */}
-        <h1 className="text-2xl font-bold text-white drop-shadow">PMP</h1>
-
-        {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-8 text-white font-medium">
-          {NAV_LINKS.map((link) => (
-            <li
-              key={link}
-              className="relative cursor-pointer transition-colors duration-300 
-                         hover:text-green-400 after:content-[''] after:absolute after:left-0 
-                         after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-green-400 
-                         after:transition-all after:duration-300 hover:after:w-full"
-            >
-              <Link to={`/${link.toLowerCase()}`}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* Resume Button */}
-        <Link
-          to="/resume.pdf"
-          className="hidden md:inline-block bg-black text-white font-semibold px-4 py-2 rounded-lg
-                     shadow-[0_0_20px_rgba(255,255,255,0.6)] 
-                     hover:shadow-[0_0_25px_rgba(0,255,128,0.8)]
-                     hover:opacity-90 
-                     transition duration-300"
+    <header className="fixed inset-x-0 top-0 z-50">
+      <nav className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
+        <div
+          className="
+            flex h-16 items-center justify-between
+            rounded-2xl
+            border border-border-primary
+            bg-bg-primary/80
+            px-4
+            shadow-lg
+            backdrop-blur-xl
+            sm:px-5
+          "
         >
-          Let&apos;s Talk
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-100 dark:bg-gray-900 px-6 py-6 space-y-4 text-center">
-          {NAV_LINKS.map((link) => (
-            <p
-              key={link}
-              className="text-white font-medium cursor-pointer transition-colors duration-300 hover:text-green-400"
-            >
-              {link}
-            </p>
-          ))}
-          <Link
-            to="/resume.pdf"
-            className="block bg-black text-white font-semibold px-4 py-2 rounded-lg 
-                       shadow-[0_0_20px_rgba(255,255,255,0.6)] 
-                       hover:shadow-[0_0_25px_rgba(0,255,128,0.8)]
-                       hover:opacity-90 
-                       transition duration-300"
+          {/* Logo */}
+          <a
+            href="#top"
+            className="group flex items-center gap-2"
           >
-            Let&apos;s Talk
-          </Link>
+            <div
+              className="
+                flex h-9 w-9 items-center justify-center
+                rounded-xl
+                border border-brand-primary/30
+                bg-brand-primary/10
+                font-mono text-sm font-bold
+                text-brand-primary
+                transition-all duration-300
+                group-hover:border-brand-primary/60
+                group-hover:shadow-[0_0_20px_var(--color-glow-primary)]
+              "
+            >
+              RD
+            </div>
+
+            <div className="hidden sm:block">
+              <p className="text-sm font-semibold text-text-primary">
+                Rahul Dewal
+              </p>
+
+              <p className="font-mono text-[10px] text-text-subtle">
+                Frontend Engineer
+              </p>
+            </div>
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-8 md:flex">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="
+                  group relative
+                  py-2
+                  text-sm font-medium
+                  text-text-muted
+                  transition-colors duration-300
+                  hover:text-text-primary
+                "
+              >
+                {link.label}
+
+                <span
+                  className="
+                    absolute bottom-0 left-0
+                    h-px w-0
+                    bg-brand-primary
+                    transition-all duration-300
+                    group-hover:w-full
+                  "
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop Actions */}
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="/resume.pdf"
+              download
+              className="
+                inline-flex items-center gap-2
+                rounded-xl
+                border border-border-secondary
+                px-4 py-2.5
+                text-sm font-medium
+                text-text-secondary
+                transition-all duration-300
+                hover:border-brand-primary/50
+                hover:text-brand-primary
+              "
+            >
+              <Download size={15} />
+              Resume
+            </a>
+
+            <a
+              href="#contact"
+              className="
+                inline-flex items-center gap-2
+                rounded-xl
+                bg-brand-primary
+                px-4 py-2.5
+                text-sm font-semibold
+                text-slate-950
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:shadow-[0_0_25px_var(--color-glow-primary)]
+              "
+            >
+              Let's Talk
+              <ArrowUpRight size={15} />
+            </a>
+          </div>
+
+          {/* Mobile Button */}
+          <button
+            type="button"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="
+              flex h-10 w-10 items-center justify-center
+              rounded-xl
+              border border-border-primary
+              bg-bg-secondary
+              text-text-secondary
+              transition-all duration-300
+              hover:border-brand-primary/40
+              hover:text-brand-primary
+              md:hidden
+            "
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10, height: 0 }}
+              animate={{ opacity: 1, y: 0, height: "auto" }}
+              exit={{ opacity: 0, y: -10, height: 0 }}
+              transition={{ duration: 0.25 }}
+              className="
+                mt-2 overflow-hidden
+                rounded-2xl
+                border border-border-primary
+                bg-bg-primary/95
+                p-3
+                shadow-xl
+                backdrop-blur-xl
+                md:hidden
+              "
+            >
+              <div className="space-y-1">
+                {NAV_LINKS.map((link, index) => (
+                  <motion.a
+                    key={link.href}
+                    href={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: index * 0.05,
+                    }}
+                    onClick={() => setIsOpen(false)}
+                    className="
+                      block rounded-xl
+                      px-4 py-3
+                      text-sm font-medium
+                      text-text-secondary
+                      transition-colors
+                      hover:bg-bg-secondary
+                      hover:text-brand-primary
+                    "
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+              </div>
+
+              <div className="mt-2 border-t border-border-primary pt-3">
+                <a
+                  href="/resume.pdf"
+                  download
+                  onClick={() => setIsOpen(false)}
+                  className="
+                    flex items-center justify-center gap-2
+                    rounded-xl
+                    border border-border-secondary
+                    px-4 py-3
+                    text-sm font-medium
+                    text-text-secondary
+                    transition-colors
+                    hover:border-brand-primary/40
+                    hover:text-brand-primary
+                  "
+                >
+                  <Download size={16} />
+                  Download Resume
+                </a>
+
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  className="
+                    mt-2
+                    flex items-center justify-center gap-2
+                    rounded-xl
+                    bg-brand-primary
+                    px-4 py-3
+                    text-sm font-semibold
+                    text-slate-950
+                    transition-all duration-300
+                    hover:shadow-[0_0_25px_var(--color-glow-primary)]
+                  "
+                >
+                  Let's Talk
+                  <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
   );
 };
 
