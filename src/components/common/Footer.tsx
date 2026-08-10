@@ -2,7 +2,9 @@ import {
   Mail,
   ArrowUp,
   LineSquiggle,
+  GitBranch,
 } from "lucide-react";
+import { SOCIAL_MEDIA } from "../../data/projects";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +16,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a
-              href="https://linkedin.com/in/rahuldewal33"
+              href={SOCIAL_MEDIA.LINKED_IN}
               className="text-lg font-bold tracking-tight text-text-primary"
             >
               Rahul<span className="text-brand-primary">.</span>
@@ -27,8 +29,8 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
-            {/* <a
-              href="https://github.com/yourusername"
+            <a
+              href={SOCIAL_MEDIA.GIT}
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -43,11 +45,11 @@ const Footer = () => {
                 hover:text-brand-primary
               "
             >
-              <Github size={18} />
-            </a> */}
+              <GitBranch size={18} />
+            </a>
 
             <a
-              href="https://linkedin.com/in/rahuldewal33"
+              href={SOCIAL_MEDIA.LINKED_IN}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -66,7 +68,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="mailto:dewalsuccess@gmail.com"
+              href={`mailto:${SOCIAL_MEDIA.MAIL}`}
               aria-label="Email"
               className="
                 rounded-lg

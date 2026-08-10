@@ -1,5 +1,6 @@
-// import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { GitBranch, Link2Icon, Mail, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SOCIAL_MEDIA } from "../../data/projects";
 
 const Contact = () => {
   return (
@@ -24,31 +25,31 @@ const Contact = () => {
             {/* Social Links */}
             <div className="flex justify-center md:justify-start gap-6 pt-4">
               <Link
-                to="mailto:your@email.com"
+                to={ `mailto:${SOCIAL_MEDIA.MAIL}`}
                 className="text-indigo-600 hover:text-indigo-800"
               >
-                {/* <Mail size={28} /> */}
+                <Mail size={28} />
               </Link>
               <Link
-                to="https://github.com/yourusername"
+                to={SOCIAL_MEDIA.GIT}
                 target="_blank"
                 className="text-gray-700 dark:text-gray-200 hover:text-indigo-600"
               >
-                {/* <Github size={28} /> */}
+                <GitBranch size={28} />
               </Link>
               <Link
-                to="https://linkedin.com/in/yourusername"
+                to={SOCIAL_MEDIA.LINKED_IN}
                 target="_blank"
                 className="text-blue-600 hover:text-blue-800"
               >
-                {/* <Linkedin size={28} /> */}
+                <Link2Icon size={28} />
               </Link>
               <Link
-                to="https://twitter.com/yourusername"
+                to={SOCIAL_MEDIA.X}
                 target="_blank"
                 className="text-sky-500 hover:text-sky-700"
               >
-                {/* <Twitter size={28} /> */}
+                <X size={28} />
               </Link>
             </div>
           </div>

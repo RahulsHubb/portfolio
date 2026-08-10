@@ -1,11 +1,10 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NAV_LINKS } from "../../data/projects";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
   return (
     <nav className="w-full bg-gray-100 dark:bg-gray-900 z-50">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
@@ -14,7 +13,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-8 text-white font-medium">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li
               key={link}
               className="relative cursor-pointer transition-colors duration-300 
@@ -51,7 +50,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-100 dark:bg-gray-900 px-6 py-6 space-y-4 text-center">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <p
               key={link}
               className="text-white font-medium cursor-pointer transition-colors duration-300 hover:text-green-400"

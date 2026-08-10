@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
+import { SOCIAL_MEDIA } from "../../data/projects";
 
 const CTA = () => {
   return (
@@ -54,7 +55,7 @@ const CTA = () => {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <motion.a
-            href="mailto:your.email@example.com"
+            href={`mailto:${SOCIAL_MEDIA.MAIL}`}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             className="btn-primary"
@@ -64,7 +65,7 @@ const CTA = () => {
           </motion.a>
 
           <motion.a
-            href="https://github.com/yourusername"
+            href={SOCIAL_MEDIA.GIT}
             target="_blank"
             rel="noreferrer"
             whileHover={{ y: -2 }}

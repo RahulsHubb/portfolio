@@ -44,6 +44,8 @@ export const CORE_TECHNOLOGIES = [
   "Git",
 ];
 
+export const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
+
 
 export const CODE_LINES = [
   "const developer = {",
@@ -189,3 +191,11 @@ export const PROJECTS = [
   },
 ];
 
+export const SOCIAL_MEDIA = Object.freeze({
+  FACEBOOK : "https://www.facebook.com/RahulDewal03/",
+  INSTAGRAM : "https://www.instagram.com/real_rahul_dewal/",
+  X: "https://x.com/rahuldewal333",
+  LINKED_IN: "https://in.linkedin.com/in/rahuldewal33",
+  GIT: "https://github.com/rahulshubb",
+  MAIL: "dewalsuccess@gmail.com"
+})
