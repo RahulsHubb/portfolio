@@ -8,6 +8,10 @@ import {
   Component,
   Database,
   Gauge,
+  Brain,
+  Boxes,
+  Wrench, Terminal,
+  Compass
 } from "lucide-react";
 
 export const DESIGNATION = [
@@ -57,18 +61,64 @@ export const CODE_LINES = [
 
 export const EXPERIENCE = [
   {
-    title: "Frontend Developer",
-    company: "Tech Solutions Inc.",
-    duration: "Jan 2022 - Present",
+    period: "2024 — Present",
+    role: "Software Developer / React Developer",
+    company: "PM Publishers Pvt. Ltd.",
+    type: "Professional Experience",
     description:
-      "Developed and maintained web applications using React and Redux.",
+      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "MUI",
+      "REST APIs",
+    ],
+    achievements: [
+      "Developed complex admin and LMS workflows",
+      "Built dynamic Question Paper Generation systems",
+      "Implemented reporting, PDF and Word export workflows",
+      "Worked on reusable and scalable frontend architecture",
+    ],
+    current: true,
   },
   {
-    title: "Web Developer Intern",
-    company: "WebWorks",
-    duration: "Jun 2021 - Dec 2021",
+    period: "2022 — 2024",
+    role: "Frontend / React Developer",
+    company: "PM Publishers Pvt. Ltd.",
+    type: "Professional Experience",
     description:
-      "Assisted in building responsive websites and improving UI/UX.",
+      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "MUI",
+      "REST APIs",
+    ],
+    achievements: [
+      "Developed complex admin and LMS workflows",
+      "Built dynamic Case Study systems",
+      "Implemented Group Discussion,Case study, PDF and Word export workflows",
+      "Worked on reusable and scalable frontend architecture",
+    ],
+    current: false,
+  },
+  {
+    period: "2021 — 2022",
+    role: "Web Developer",
+    company: "Webtech Age Private Limited",
+    type: "Professional Experience",
+    description:
+      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
+    technologies: [
+      "HTML", "CSS", "BootStrap4", "JavaScript", "React.js"
+    ],
+    achievements: ["Created User Interface with the Help of React.", "Created Multiple UI of Websites.", "Many Landing Pages for the Clients"
+    ],
+    current: false,
   },
 ];
 
@@ -152,6 +202,59 @@ export const SERVICES = [
   },
 ];
 
+export const TOOLKIT_CATEGORIES = [
+  {
+    title: "Frontend",
+    description: "Building modern, scalable user interfaces.",
+    icon: Code2,
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Material UI",
+    ],
+  },
+  {
+    title: "State & Data",
+    description: "Managing application state and API-driven workflows.",
+    icon: Database,
+    technologies: [
+      "Redux",
+      "REST APIs",
+      "Async Workflows",
+      "Form State",
+      "API Integration",
+    ],
+  },
+  {
+    title: "Tools & Workflow",
+    description: "Tools that support efficient development.",
+    icon: Terminal,
+    technologies: [
+      "Git",
+      "GitHub",
+      "Vite",
+      "npm",
+      "VS Code",
+    ],
+  },
+  {
+    title: "Engineering",
+    description: "Principles I apply when building software.",
+    icon: Layers3,
+    technologies: [
+      "Component Architecture",
+      "Reusable Systems",
+      "Performance",
+      "Responsive UI",
+      "Maintainability",
+    ],
+  },
+];
+
 // export const PROJECTS = [
 //   {
 //     title: "E-Commerce Website",
@@ -191,7 +294,7 @@ export const SERVICES = [
 //   },
 // ];
 
-export  const PROJECTS = [
+export const PROJECTS = [
   {
     title: "PMP LMS",
     category: "Learning Management Platform",
@@ -258,10 +361,61 @@ export  const PROJECTS = [
   },
 ];
 
+export const ENGINEER_APPROACHES = [
+  {
+    number: "01",
+    title: "Understand the Problem",
+    description:
+      "I start with the product requirement, user flow, and actual problem before deciding how the UI or code should work.",
+    icon: Brain,
+  },
+  {
+    number: "02",
+    title: "Design the Architecture",
+    description:
+      "Complex features are broken into reusable components, predictable state, and clear responsibilities.",
+    icon: Boxes,
+  },
+  {
+    number: "03",
+    title: "Build for Maintainability",
+    description:
+      "I prioritize readable code, reusable abstractions, consistent patterns, and solutions that teams can extend.",
+    icon: Wrench,
+  },
+  {
+    number: "04",
+    title: "Improve Continuously",
+    description:
+      "Performance, responsive behavior, accessibility, and user experience are considered throughout development.",
+    icon: Gauge,
+  },
+];
+export  const MY_RULES_WORK_WITH = [
+  {
+    icon: Brain,
+    title: "Product Mindset",
+    description:
+      "I try to understand the problem behind a requirement before thinking about the implementation.",
+  },
+  {
+    icon: Layers3,
+    title: "Ownership",
+    description:
+      "I enjoy taking features from requirement and UI implementation through integration, refinement, and delivery.",
+  },
+  {
+    icon: Compass,
+    title: "Continuous Learning",
+    description:
+      "I'm continuously expanding beyond frontend development and exploring deeper full-stack engineering.",
+  },
+];
+
 
 export const SOCIAL_MEDIA = Object.freeze({
-  FACEBOOK : "https://www.facebook.com/RahulDewal03/",
-  INSTAGRAM : "https://www.instagram.com/real_rahul_dewal/",
+  FACEBOOK: "https://www.facebook.com/RahulDewal03/",
+  INSTAGRAM: "https://www.instagram.com/real_rahul_dewal/",
   X: "https://x.com/rahuldewal333",
   LINKED_IN: "https://in.linkedin.com/in/rahuldewal33",
   GIT: "https://github.com/rahulshubb",
