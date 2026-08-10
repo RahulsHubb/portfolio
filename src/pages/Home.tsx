@@ -8,6 +8,7 @@ import Footer from "../components/common/Footer";
 import QuickProof from "../components/home/QuickProof";
 import WhatIBuild from "../components/home/WhatIBuild";
 import CTA from "../components/common/CTA";
+import FeaturedWork from "../components/home/FeaturedWork";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <QuickProof/>
       <WhatIBuild/>
+      <FeaturedWork/>
       <About />
       <Skills />
       <Projects />
