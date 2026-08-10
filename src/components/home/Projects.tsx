@@ -16,7 +16,7 @@ const Projects = () => {
               className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition"
             >
               <img
-                src={project.img}
+                src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
@@ -30,7 +30,7 @@ const Projects = () => {
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
+                  {project.technologies.map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1 bg-indigo-100 text-indigo-600 text-sm rounded-full"
@@ -43,15 +43,15 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex gap-4 pt-4">
                   <Link
-                    to={project.demo}
+                    to={project.liveUrl}
                     target="_blank"
                     className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
                   >
                     Live Demo
                   </Link>
-                  {project.github && (
+                  {project.githubUrl && (
                     <Link
-                      to={project.github}
+                      to={project.githubUrl}
                       target="_blank"
                       className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
                     >
