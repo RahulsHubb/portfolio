@@ -14,6 +14,8 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
+      <QuickProof/>
+      <WhatIBuild/>
       <About />
       <Skills />
       <Projects />

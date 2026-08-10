@@ -1,3 +1,15 @@
+
+import {
+  Code2,
+  Layers3,
+  Rocket,
+  GitBranch,
+  LayoutDashboard,
+  Component,
+  Database,
+  Gauge,
+} from "lucide-react";
+
 export const DESIGNATION = [
   "Frontend Developer",
   "React Developer",
@@ -8,6 +20,7 @@ export const SKILLS = [
   "JavaScript",
   "React JS",
   "TypeScript",
+  "REST APIs",
   "Redux",
   "HTML",
   "CSS",
@@ -19,6 +32,18 @@ export const SKILLS = [
   // "Express",
   // "MongoDB",
 ];
+
+export const CORE_TECHNOLOGIES = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Redux",
+  "REST APIs",
+  "Tailwind CSS",
+  "Material UI",
+  "Git",
+];
+
 
 export const CODE_LINES = [
   "const developer = {",
@@ -44,6 +69,7 @@ export const EXPERIENCE = [
       "Assisted in building responsive websites and improving UI/UX.",
   },
 ];
+
 export const EDUCATION = [
   {
     degree: "BCA in Computer Science",
@@ -61,6 +87,69 @@ export const EDUCATION = [
     duration: "2013 - 2014",
   },
 ];
+
+export const STATS = [
+  {
+    value: "5+",
+    label: "Years Experience",
+    description: "Building production frontends",
+    icon: Code2,
+  },
+  {
+    value: "20+",
+    label: "Features Shipped",
+    description: "Across real-world products",
+    icon: Layers3,
+  },
+  {
+    value: "React",
+    label: "Primary Expertise",
+    description: "Scalable component architecture",
+    icon: Rocket,
+  },
+  {
+    value: "TypeScript",
+    label: "Development Stack",
+    description: "Reliable and maintainable code",
+    icon: GitBranch,
+  },
+];
+
+export const SERVICES = [
+  {
+    number: "01",
+    title: "Scalable React Applications",
+    description:
+      "Component-driven applications designed to stay maintainable as products and teams grow.",
+    tags: ["React", "TypeScript", "Architecture"],
+    icon: Component,
+  },
+  {
+    number: "02",
+    title: "Complex Dashboards",
+    description:
+      "Data-heavy interfaces with forms, filters, tables, reports, and role-based workflows.",
+    tags: ["Redux", "REST APIs", "MUI"],
+    icon: LayoutDashboard,
+  },
+  {
+    number: "03",
+    title: "Reusable UI Systems",
+    description:
+      "Consistent, reusable components that reduce duplication and make product development faster.",
+    tags: ["Components", "Design Systems", "CSS"],
+    icon: Database,
+  },
+  {
+    number: "04",
+    title: "Performance-Focused Frontends",
+    description:
+      "Responsive experiences optimized for usability, rendering performance, and real-world usage.",
+    tags: ["Performance", "UX", "Responsive"],
+    icon: Gauge,
+  },
+];
+
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
