@@ -11,7 +11,7 @@ featured work, engineering approach, technical toolkit, and professional journey
 
 ### Home / Hero
 
-![Portfolio Hero](./screenshots/hero.png)
+![Portfolio Hero](/og-image.png)
 
 ### Featured Work
 
