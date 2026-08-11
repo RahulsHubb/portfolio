@@ -86,7 +86,7 @@ const Navbar = () => {
           {/* Desktop Actions */}
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="/resume.pdf"
+              href="/Rahul_Dewal_Resume5Years.pdf"
               download
               className="
                 inline-flex items-center gap-2
@@ -191,7 +191,7 @@ const Navbar = () => {
 
               <div className="mt-2 border-t border-border-primary pt-3">
                 <a
-                  href="/resume.pdf"
+                  href="/Rahul_Dewal_Resume5Years.pdf"
                   download
                   onClick={() => setIsOpen(false)}
                   className="

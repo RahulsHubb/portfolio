@@ -173,7 +173,7 @@ const Experience = () => {
           className="mt-10 sm:pl-12"
         >
           <a
-            href="/resume.pdf"
+            href="/Rahul_Dewal_Resume5Years.pdf"
             download
             className="
               inline-flex items-center gap-2

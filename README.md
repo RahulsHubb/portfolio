@@ -237,7 +237,7 @@ engineering portfolio** rather than a generic template.
 portfolio/
 │
 ├── public/
-│   ├── resume.pdf
+│   ├── Rahul_Dewal_Resume5Years.pdf
 │   └── ...
 │
 ├── src/
