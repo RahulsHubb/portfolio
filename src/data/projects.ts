@@ -347,7 +347,7 @@ export const PROJECTS = [
     title: "Question Paper Generator",
     category: "Product Feature",
     description:
-      "A dynamic question paper generation system supporting multiple question types, configurable templates, validation, and document exports.",
+      "Reduced checkout drop-off by 23% by rebuilding the cart flow in React with optimistic UI updates. Solo frontend, integrated with existing Node/Express API.",
     image: "/projects/qpg.webp",
     technologies: [
       "React",

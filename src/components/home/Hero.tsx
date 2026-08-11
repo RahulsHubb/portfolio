@@ -73,8 +73,7 @@ const Hero = () => {
                 sm:text-xl
               "
             >
-              I build scalable, maintainable React applications that solve
-              real-world product and business problems.
+              I'm Rahul Dewal, a React developer with 5 years building production-grade web apps. I've shipped 20+ features used by 4k+ users. Currently open to Frontend Developer roles with React.
             </motion.p>
 
             {/* ========================================
