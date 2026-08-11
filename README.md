@@ -24,5 +24,5 @@ The website is fully responsive, modern, and optimized for performance.
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-💡 Built with ❤️ by [Rahul Dewal](https://github.com/rahuldewal)
+💡 Built with ❤️ by [Rahul Dewal](https://github.com/rahulshubb)
 
