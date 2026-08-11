@@ -3,19 +3,24 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Rahul Dewal — React Developer | 5 Years Experience</title>
+
+
+  <!-- Primary SEO -->
+  <title>
+    Rahul Dewal — React Developer | 5 Years Experience
+  </title>
 
   <meta name="description"
     content="Rahul Dewal is a Frontend Engineer specializing in React, TypeScript, JavaScript and scalable web applications." />
 
   <link rel="canonical" href="https://rahuldewalportfolio.netlify.app/" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
 
-  <!-- Open Graph when user share the website -->
   <meta property="og:title" content="Rahul Dewal | React Developer" />
 
   <meta property="og:description"
@@ -24,9 +29,10 @@
   <meta property="og:url" content="https://rahuldewalportfolio.netlify.app/" />
 
   <meta property="og:image" content="https://rahuldewalportfolio.netlify.app/og-image.png" />
+
   <meta property="og:image:width" content="1200" />
+
   <meta property="og:image:height" content="630" />
-  
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -37,10 +43,32 @@
     content="Frontend Engineer specializing in React, TypeScript, JavaScript and scalable web applications." />
 
   <meta name="twitter:image" content="https://rahuldewalportfolio.netlify.app/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rahul Dewal",
+      "url": "https://rahuldewalportfolio.netlify.app/",
+      "jobTitle": "Frontend Engineer",
+      "knowsAbout": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Redux",
+        "Frontend Development"
+      ],
+      "sameAs": [
+        "https://github.com/rahulshubb"
+      ]
+    }
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
+
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

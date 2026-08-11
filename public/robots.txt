@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rahuldewalportfolio.netlify.app/sitemap.xml
