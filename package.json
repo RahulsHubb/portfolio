@@ -5,23 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npx react-snap",
+    "build": "tsc && vite build",
     "preview": "vite preview"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "inlineCss": false,
-    "minifyHtml": false
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.0.5",
-    "react-snap": "^1.23.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "vite": "^8.2.1",
-    "vite-plugin-prerender": "^1.0.8"
+    "vite": "^8.2.1"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
