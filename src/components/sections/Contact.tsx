@@ -1,82 +1,179 @@
-import { GitBranch, Link2Icon, Mail, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { GitBranch, Link2Icon, Mail, PhoneCall, X } from "lucide-react";
 import { SOCIAL_MEDIA } from "../../data/projects";
-
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12">
-          Contact Me
-        </h2>
+    <section
+      id="contact"
+      className="border-t border-border-primary bg-bg-primary py-24"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-primary">
+            Contact
+          </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left: Contact Info */}
-          <div className="space-y-6 text-center md:text-left">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-              Let’s Connect 🚀
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              I’m always open to discussing new opportunities, exciting
-              projects, or collaborations. Drop me a message and I’ll get back
-              to you as soon as possible!
+          <h2 className="mt-4 text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
+            Let&apos;s build something
+            <span className="block bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
+              worth shipping.
+            </span>
+          </h2>
+
+          <p className="mt-6 text-lg leading-8 text-text-secondary">
+            Whether you&apos;re hiring a React developer, looking for
+            frontend expertise, or have an interesting product idea,
+            I&apos;d love to hear from you.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-12 lg:grid-cols-2">
+          {/* Left */}
+          <div className="flex flex-col justify-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-text-muted">
+              Have a project in mind?
             </p>
 
-            {/* Social Links */}
-            <div className="flex justify-center md:justify-start gap-6 pt-4">
-              <Link
-                to={ `mailto:${SOCIAL_MEDIA.MAIL}`}
-                className="text-indigo-600 hover:text-indigo-800"
+            <h3 className="mt-3 text-2xl font-semibold text-text-primary">
+              Let&apos;s start a conversation.
+            </h3>
+
+            <p className="mt-4 max-w-lg leading-7 text-text-secondary">
+              I&apos;m open to frontend opportunities, freelance projects,
+              product collaborations, and interesting engineering challenges.
+            </p>
+            <div className="flex gap-3">
+
+              {/* Email */}
+              <a
+                href={`mailto:${SOCIAL_MEDIA.MAIL}`}
+                className="portfolio-card portfolio-card-hover mt-8 flex items-center gap-4 p-5"
               >
-                <Mail size={28} />
-              </Link>
-              <Link
-                to={SOCIAL_MEDIA.GIT}
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-glow-primary text-brand-primary">
+                  <Mail size={20} />
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-text-muted">
+                    Email
+                  </p>
+
+                  <p className="mt-1 text-sm font-medium text-text-primary">
+                    {SOCIAL_MEDIA.MAIL}
+                  </p>
+                </div>
+              </a>
+
+              {/* Contact No. */}
+              <a
+                href={`tel:${SOCIAL_MEDIA.PHONE}`}
+                className="portfolio-card portfolio-card-hover mt-8 flex items-center gap-4 p-5"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-glow-primary text-brand-primary">
+                  <PhoneCall size={20} />
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-text-muted">
+                    Contact No.
+                  </p>
+
+                  <p className="mt-1 text-sm font-medium text-text-primary">
+                    {SOCIAL_MEDIA.PHONE}
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            {/* Social */}
+            <div className="mt-8 flex gap-3">
+              <a
+                href={SOCIAL_MEDIA.GIT}
                 target="_blank"
-                className="text-gray-700 dark:text-gray-200 hover:text-indigo-600"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border-primary bg-bg-secondary text-text-secondary transition hover:border-brand-primary hover:text-brand-primary"
               >
-                <GitBranch size={28} />
-              </Link>
-              <Link
-                to={SOCIAL_MEDIA.LINKED_IN}
+                <GitBranch size={20} />
+              </a>
+
+              <a
+                href={SOCIAL_MEDIA.LINKED_IN}
                 target="_blank"
-                className="text-blue-600 hover:text-blue-800"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border-primary bg-bg-secondary text-text-secondary transition hover:border-brand-primary hover:text-brand-primary"
               >
-                <Link2Icon size={28} />
-              </Link>
-              <Link
-                to={SOCIAL_MEDIA.X}
+                <Link2Icon size={20} />
+              </a>
+
+              <a
+                href={SOCIAL_MEDIA.X}
                 target="_blank"
-                className="text-sky-500 hover:text-sky-700"
+                rel="noreferrer"
+                aria-label="X"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border-primary bg-bg-secondary text-text-secondary transition hover:border-brand-primary hover:text-brand-primary"
               >
-                <X size={28} />
-              </Link>
+                <X size={20} />
+              </a>
             </div>
           </div>
 
-          {/* Right: Contact Form */}
-          <form className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 space-y-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-indigo-500 outline-none"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
-            >
-              Send Message
-            </button>
+          {/* Right */}
+          <form className="portfolio-card bg-bg-card p-6 shadow-xl sm:p-8">
+            <div className="space-y-5">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-text-secondary">
+                  Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full rounded-xl border border-border-primary bg-bg-secondary px-4 py-3.5 text-text-primary outline-none transition placeholder:text-text-subtle focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-text-secondary">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  className="w-full rounded-xl border border-border-primary bg-bg-secondary px-4 py-3.5 text-text-primary outline-none transition placeholder:text-text-subtle focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-text-secondary">
+                  Project / Opportunity
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="What can I help you with?"
+                  className="w-full rounded-xl border border-border-primary bg-bg-secondary px-4 py-3.5 text-text-primary outline-none transition placeholder:text-text-subtle focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-text-secondary">
+                  Message
+                </label>
+
+                <textarea
+                  rows={5}
+                  placeholder="Tell me a little about your project..."
+                  className="w-full resize-none rounded-xl border border-border-primary bg-bg-secondary px-4 py-3.5 text-text-primary outline-none transition placeholder:text-text-subtle focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                />
+              </div>
+
+              <button type="submit" className="btn-primary w-full">
+                Send Message →
+              </button>
+            </div>
           </form>
         </div>
       </div>
