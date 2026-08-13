@@ -1,5 +1,6 @@
 import { GitBranch, Link2Icon, Mail, PhoneCall, X } from "lucide-react";
 import { SOCIAL_MEDIA } from "../../data/projects";
+
 const Contact = () => {
   return (
     <section
