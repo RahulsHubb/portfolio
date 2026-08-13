@@ -66,64 +66,78 @@ export const CODE_LINES = [
 
 export const EXPERIENCE = [
   {
-    period: "2024 — Present",
-    role: "Software Developer / React Developer",
-    company: "PM Publishers Pvt. Ltd.",
-    type: "Professional Experience",
-    description:
-      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "MUI",
-      "REST APIs",
-    ],
-    achievements: [
-      "Developed complex admin and LMS workflows",
-      "Built dynamic Question Paper Generation systems",
-      "Implemented reporting, PDF and Word export workflows",
-      "Worked on reusable and scalable frontend architecture",
-    ],
-    current: true,
-  },
-  {
-    period: "2022 — 2024",
-    role: "Frontend / React Developer",
-    company: "PM Publishers Pvt. Ltd.",
-    type: "Professional Experience",
-    description:
-      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "MUI",
-      "REST APIs",
-    ],
-    achievements: [
-      "Developed complex admin and LMS workflows",
-      "Built dynamic Case Study systems",
-      "Implemented Group Discussion,Case study, PDF and Word export workflows",
-      "Worked on reusable and scalable frontend architecture",
-    ],
-    current: false,
-  },
-  {
     period: "2021 — 2022",
     role: "Web Developer",
     company: "Webtech Age Private Limited",
     type: "Professional Experience",
     description:
-      "Building and maintaining production-grade React applications across learning, administration, reporting, and content management workflows.",
+      "Built responsive websites and landing pages using React, translating designs into reusable components and interactive user interfaces.",
     technologies: [
-      "HTML", "CSS", "BootStrap4", "JavaScript", "React.js"
+      "HTML",
+      "CSS",
+      "Bootstrap 4",
+      "JavaScript",
+      "React.js",
     ],
-    achievements: ["Created User Interface with the Help of React.", "Created Multiple UI of Websites.", "Many Landing Pages for the Clients"
+    achievements: [
+      "Developed responsive websites and landing pages using React.js.",
+      "Built reusable React components for consistent and maintainable UI development.",
+      "Converted design concepts into responsive and interactive web experiences.",
+      "Delivered multiple client websites with a focus on usability and visual consistency.",
     ],
     current: false,
+  },
+
+  {
+    period: "2022 — 2024",
+    role: "Frontend Developer (React)",
+    company: "AHOM Technologies Private Limited",
+    type: "Professional Experience",
+    description:
+      "Developed complex React applications by integrating REST APIs, managing dynamic data, and building feature-rich learning, collaboration, scheduling, and reporting workflows.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "MUI",
+      "REST APIs",
+      "WebSocket",
+    ],
+    achievements: [
+      "Developed complex LMS modules including Case Study, Group Discussion, and Assignment workflows.",
+      "Integrated multiple REST APIs and handled complex data binding, state management, validation, and asynchronous workflows.",
+      "Implemented real-time features using WebSocket, including live chat and application updates.",
+      "Built calendar-based meeting scheduling and management workflows.",
+      "Developed PDF and Word export workflows for application-generated content and reports.",
+    ],
+    current: false,
+  },
+
+  {
+    period: "2024 — Present",
+    role: "Software Developer",
+    company: "PM Publishers Pvt. Ltd.",
+    type: "Professional Experience",
+    description:
+      "Own frontend development for a multi-role LMS, building scalable React interfaces and complex learning, assessment, automation, reporting, and content-management workflows.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Redux",
+      "MUI",
+      "REST APIs",
+      "AWS S3",
+    ],
+    achievements: [
+      "Built frontend workflows for Super Admin, School Admin, Teacher, and Student roles within a multi-role LMS.",
+      "Developed a dynamic Question Paper Generator with configurable question types and automated question-generation workflows.",
+      "Built MLP assignment workflows connected to chapters, topics, student progress, and teacher actions.",
+      "Implemented video completion tracking, teacher prompts, and student assignment submission workflows.",
+      "Integrated complex REST APIs and AWS S3 workflows while building reusable and scalable React components.",
+    ],
+    current: true,
   },
 ];
 
@@ -304,7 +318,7 @@ export const PROJECTS = [
     title: "PMP LMS",
     category: "Learning Management Platform",
     description:
-      "A large-scale learning management platform with admin workflows, resource management, question paper generation, reporting, and role-based experiences.",
+      "A multi-role LMS serving Super Admins, School Admins, Teachers, and Students with learning, assessment, assignment, reporting, and content-management workflows.",
     image: "/projects/lms.png",
     technologies: [
       "React",
@@ -312,21 +326,24 @@ export const PROJECTS = [
       "Redux",
       "MUI",
       "REST APIs",
+      "AWS S3",
     ],
     highlights: [
-      "Complex admin workflows",
-      "Dynamic question paper generation",
-      "Report generation and exports",
+      "Multi-role LMS with complex learning workflows",
+      "MLP assignment and student progress tracking",
+      "Chapter video completion and teacher-triggered tasks",
+      "Dynamic reporting and document export workflows",
     ],
     featured: true,
     liveUrl: "https://pmponline.co.in",
-    githubUrl: "#",
+    githubUrl: "",
   },
+
   {
     title: "HeartWise",
     category: "Education Platform",
     description:
-      "A modern educational platform focused on delivering structured learning experiences through a responsive and accessible interface.",
+      "A modern education platform focused on delivering structured learning content through responsive interfaces, reusable components, and a clean user experience.",
     image: "/projects/heartWise.png",
     technologies: [
       "React",
@@ -335,35 +352,39 @@ export const PROJECTS = [
       "REST APIs",
     ],
     highlights: [
-      "Responsive education experience",
-      "Reusable UI sections",
-      "Performance-focused frontend",
+      "Responsive education-focused interfaces",
+      "Reusable React components and UI sections",
+      "Structured content and learning experiences",
+      "Performance-focused frontend implementation",
     ],
     featured: false,
     liveUrl: "https://weareheartwise.in/",
-    githubUrl: "#",
+    githubUrl: "",
   },
   {
-    title: "Question Paper Generator",
-    category: "Product Feature",
+    title: "Viliyo",
+    category: "Virtual Training & Collaboration Platform",
     description:
-      "Reduced checkout drop-off by 23% by rebuilding the cart flow in React with optimistic UI updates. Solo frontend, integrated with existing Node/Express API.",
-    image: "/projects/qpg.webp",
+      "A virtual training platform with interactive learning workflows, case studies, group discussions, assignments, video calling, live chat, and real-time collaboration features.",
+    image: "/projects/viliyo.png",
     technologies: [
       "React",
-      "Redux",
       "TypeScript",
-      "jsPDF",
+      "Redux",
+      "MUI",
+      "REST APIs",
+      "WebSocket",
     ],
     highlights: [
-      "Dynamic form architecture",
-      "Multiple question types",
-      "PDF and Word exports",
+      "Interactive Case Study and Group Discussion workflows",
+      "Assignment and learning activity management",
+      "Real-time video calling and live chat",
+      "WebSocket-based real-time communication",
     ],
     featured: false,
-    liveUrl: "https://pmponline.co.in",
-    githubUrl: "#",
-  },
+    liveUrl: "https://www.viliyo.com/",
+    githubUrl: "",
+  }
 ];
 
 export const ENGINEER_APPROACHES = [
@@ -396,7 +417,7 @@ export const ENGINEER_APPROACHES = [
     icon: Gauge,
   },
 ];
-export  const MY_RULES_WORK_WITH = [
+export const MY_RULES_WORK_WITH = [
   {
     icon: Brain,
     title: "Product Mindset",
@@ -424,5 +445,6 @@ export const SOCIAL_MEDIA = Object.freeze({
   X: "https://x.com/rahuldewal333",
   LINKED_IN: "https://in.linkedin.com/in/rahuldewal33",
   GIT: "https://github.com/rahulshubb",
-  MAIL: "dewalsuccess@gmail.com"
+  MAIL: "dewalsuccess@gmail.com",
+  PHONE: "+91-8630407669"
 })

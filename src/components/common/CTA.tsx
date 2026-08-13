@@ -42,8 +42,9 @@ const CTA = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-text-muted"
         >
-          I'm open to frontend opportunities, challenging products, and
-          engineering teams where I can build, learn, and make an impact.
+          Whether you&apos;re hiring a React developer, building a new product,
+          or looking for frontend expertise, I&apos;d love to hear what you&apos;re
+          working on.
         </motion.p>
 
         {/* Actions */}
@@ -58,23 +59,33 @@ const CTA = () => {
             href={`mailto:${SOCIAL_MEDIA.MAIL}`}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="btn-primary"
+            className="btn-primary flex gap-3"
           >
             <Mail size={18} />
-            Let's Talk
+            Start a Conversation
           </motion.a>
 
           <motion.a
-            href={SOCIAL_MEDIA.GIT}
-            target="_blank"
-            rel="noreferrer"
+            href={`tel:${SOCIAL_MEDIA.PHONE}`}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="btn-secondary"
+            className="btn-secondary flex gap-3"
           >
-            View GitHub
+            Contact Me
             <ArrowUpRight size={18} />
           </motion.a>
+        </motion.div>
+
+        {/* Availability */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-8 flex items-center justify-center gap-2 text-sm text-text-subtle"
+        >
+          <span className="h-2 w-2 rounded-full bg-brand-success shadow-[0_0_10px_rgba(132,204,22,0.7)]" />
+          Open to frontend opportunities & freelance projects
         </motion.div>
       </div>
     </section>

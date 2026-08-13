@@ -9,6 +9,7 @@ import EngineeringApproach from "../components/home/EngineeringApproach";
 import Experience from "../components/home/Experience";
 import EngineeringToolkit from "../components/home/EngineeringToolkit";
 import About from "../components/sections/About";
+// import Contact from "../components/sections/Contact";
 
 const Home = () => {
   return (
@@ -21,8 +22,9 @@ const Home = () => {
       <EngineeringApproach />
       <Experience/>
       <EngineeringToolkit/>
-      <CTA />
       <About/>
+      {/* <Contact/> */}
+      <CTA />
       <Footer />
     </div>
   );

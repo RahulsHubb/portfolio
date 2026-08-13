@@ -103,22 +103,22 @@ export const ProjectCard = ({
             View Project
             <ArrowUpRight size={16} />
           </a>
-
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="
+          {project.githubUrl &&
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="
               inline-flex items-center gap-2
               text-sm font-medium
               text-text-muted
               transition-colors
               hover:text-brand-primary
             "
-          >
-            <GitBranch size={16} />
-            Source Code
-          </a>
+            >
+              <GitBranch size={16} />
+              Source Code
+            </a>}
         </div>
       </div>
     </motion.article>

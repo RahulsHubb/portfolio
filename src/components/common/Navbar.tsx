@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight, Download } from "lucide-react";
-import { NAV_LINKS } from "../../data/projects";
+import { NAV_LINKS, SOCIAL_MEDIA } from "../../data/projects";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -211,7 +211,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="#contact"
+                  href={`tel:${SOCIAL_MEDIA.PHONE}`}
                   onClick={() => setIsOpen(false)}
                   className="
                     mt-2
